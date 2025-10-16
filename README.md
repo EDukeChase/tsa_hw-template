@@ -8,24 +8,20 @@ This is a template for Time Series Analysis (CU Denver: MATH-5027), pre-configur
 This repository contains several key configuration files that automate your setup process.
 
 -   **`_quarto.yml`**: The main control panel for the Quarto project.
-
--   **`R/initialize_project.R`**: An automation script that runs once to set up a new project. It renames generic files (`.Rproj`, `.qmd`) and replaces this `README.md` with a project-specific template.
-
--   **`R/setup.R`**: The script where you load R packages and set global options for your analysis.
-
+-   **`_PROJECT_README.md`**: A template that will become the `README.md` for your new homework repository.
+-   **`R/initialize_project.R`**: An automation script that renames project files and replaces this instructional README with the project-specific one.
+-   **`R/setup.R`**: The script where you load R packages and set global options.
+-   **`docs/`**: A folder to store assignment instructions and other supplementary documents.
 -   **`renv` files**: The core of the project's reproducibility (`renv.lock`, `.Rprofile`).
-
--   ...and other configuration files (`.gitignore`, etc.).
 
 ## Workflow for a New Assignment
 
 ### One-Time Setup
 
-You need a GitHub Personal Access Token (PAT) so R can interact with your account.
+You need a GitHub Personal Access Token (PAT) so R can interact with your GitHub account.
 
-1.  **Generate Token:** In R, run `usethis::create_github_token()`. Give it a name, check the `repo` scope, generate it, and **copy the token immediately**.
-
-2.  **Store Token:** Back in R, run `gitcreds::gitcreds_set()` and paste the token when prompted.
+1.  **Generate Token:** Run `usethis::create_github_token()`. Give it a name, check the `repo` scope, and **copy the token immediately**.
+2.  **Store Token:** Run `gitcreds::gitcreds_set()` and paste the token when prompted.
 
 ### Creating a New Project
 
@@ -40,7 +36,7 @@ new_repo_name <- "2025-mm-dd_tsa_homework-{num}"
 new_repo_desc <- "Homework {num} for Time Series Analysis"
 
 gh::gh(
-  "POST /repos/EDukeChase/pdf_template/generate",
+  "POST /repos/EDukeChase/tsa-hw-template/generate", 
   name = new_repo_name,
   description = new_repo_desc
 )
