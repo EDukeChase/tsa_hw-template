@@ -36,7 +36,7 @@ new_repo_name <- "2025-mm-dd_tsa_homework-{num}"
 new_repo_desc <- "Homework {num} for Time Series Analysis"
 
 gh::gh(
-  "POST /repos/EDukeChase/tsa-hw-template/generate", 
+  "POST /repos/EDukeChase/tsa_hw-template/generate", 
   name = new_repo_name,
   description = new_repo_desc
 )
