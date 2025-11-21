@@ -50,7 +50,7 @@ Use `usethis` to clone the new repo to your local machine.
 library(usethis)
 create_from_github(
     repo = paste0("EDukeChase/", new_repo_name),
-    destdir = "G:\\My Drive\\cu_denver\\2025_3-fall\\time-series_math-5027\\tsa_homework",
+    destdir = "C:\\Users\\dukec\\Documents\\cu_denver\\2025_3-fall\\time-series_math-5027\\tsa_homework",
     open = TRUE
 )
 ```
@@ -78,13 +78,3 @@ You **must** restart the project to use the new `.Rproj` file.
 1. Go to `File > Close Project`.
 
 2. Go to `File > Open Project...` and select your newly names `.Rproj` file.
-
-#### Step 6: Customize Your New README.md
-
-This is the final step. The main `README.md` has been replaced with a generic template.
-
-1. Open the new `README.md` file.
-
-2. Fill in the placeholders like `{num}`, `2025-mm-dd`, etc.
-
-3. **Commit and push** this change to your repository. This ensures your new project is self-documenting.
